@@ -19,7 +19,7 @@ namespace SigilADay
     {
         private const string PluginGuid = "cyantist.inscryption.sigiladay";
         private const string PluginName = "SigilADay";
-        private const string PluginVersion = "1.1.0.0";
+        private const string PluginVersion = "1.1.2.0";
 
         private void Awake()
         {
@@ -32,6 +32,12 @@ namespace SigilADay
             AddRegen3();
             AddRegenFull();
             AddPoisonous();
+            ChangeRingworm();
+        }
+
+        private void ChangeRingworm(){
+            List<Ability> abilities = new List<Ability> {Poisonous.ability};
+            new CustomCard("RingWorm") {abilities=abilities};
         }
 
         private NewAbility AddBloodGuzzler()
@@ -77,7 +83,7 @@ namespace SigilADay
             tex.LoadImage(imgBytes);
 
             NewAbility ability = new NewAbility(info,typeof(Leech),tex);
-            BloodGuzzler.ability = ability.ability;
+            Leech.ability = ability.ability;
             return ability;
         }
 
@@ -100,7 +106,7 @@ namespace SigilADay
             tex.LoadImage(imgBytes);
 
             NewAbility ability = new NewAbility(info,typeof(Regen1),tex);
-            BloodGuzzler.ability = ability.ability;
+            Regen1.ability = ability.ability;
             return ability;
         }
 
@@ -123,7 +129,7 @@ namespace SigilADay
             tex.LoadImage(imgBytes);
 
             NewAbility ability = new NewAbility(info,typeof(Regen2),tex);
-            BloodGuzzler.ability = ability.ability;
+            Regen2.ability = ability.ability;
             return ability;
         }
 
@@ -146,7 +152,7 @@ namespace SigilADay
             tex.LoadImage(imgBytes);
 
             NewAbility ability = new NewAbility(info,typeof(Regen3),tex);
-            BloodGuzzler.ability = ability.ability;
+            Regen3.ability = ability.ability;
             return ability;
         }
 
@@ -169,7 +175,7 @@ namespace SigilADay
             tex.LoadImage(imgBytes);
 
             NewAbility ability = new NewAbility(info,typeof(RegenFull),tex);
-            BloodGuzzler.ability = ability.ability;
+            RegenFull.ability = ability.ability;
             return ability;
         }
 
@@ -192,7 +198,7 @@ namespace SigilADay
             tex.LoadImage(imgBytes);
 
             NewAbility ability = new NewAbility(info,typeof(Poisonous),tex);
-            BloodGuzzler.ability = ability.ability;
+            Poisonous.ability = ability.ability;
             return ability;
         }
 
