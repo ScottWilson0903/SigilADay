@@ -19,7 +19,7 @@ namespace SigilADay
     {
         private const string PluginGuid = "cyantist.inscryption.sigiladay";
         private const string PluginName = "SigilADay";
-        private const string PluginVersion = "1.1.2.0";
+        private const string PluginVersion = "1.1.3.0";
 
         private void Awake()
         {
@@ -54,7 +54,7 @@ namespace SigilADay
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
-            byte[] imgBytes = System.IO.File.ReadAllBytes("BepInEx/plugins/CardLoader/Artwork/ability_bloodguzzler.png");
+            byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("SigilADay.dll",""),"Artwork/ability_bloodguzzler.png"));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
@@ -78,7 +78,7 @@ namespace SigilADay
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
             // Icon made by Lorc. Available on https://game-icons.net
-            byte[] imgBytes = System.IO.File.ReadAllBytes("BepInEx/plugins/CardLoader/Artwork/ability_leech.png");
+            byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("SigilADay.dll",""),"Artwork/ability_leech.png"));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
@@ -101,7 +101,7 @@ namespace SigilADay
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
-            byte[] imgBytes = System.IO.File.ReadAllBytes("BepInEx/plugins/CardLoader/Artwork/ability_regen_1.png");
+            byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("SigilADay.dll",""),"Artwork/ability_regen_1.png"));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
@@ -124,7 +124,7 @@ namespace SigilADay
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
-            byte[] imgBytes = System.IO.File.ReadAllBytes("BepInEx/plugins/CardLoader/Artwork/ability_regen_2.png");
+            byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("SigilADay.dll",""),"Artwork/ability_regen_2.png"));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
@@ -147,7 +147,7 @@ namespace SigilADay
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
-            byte[] imgBytes = System.IO.File.ReadAllBytes("BepInEx/plugins/CardLoader/Artwork/ability_regen_3.png");
+            byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("SigilADay.dll",""),"Artwork/ability_regen_3.png"));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
@@ -170,7 +170,7 @@ namespace SigilADay
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
-            byte[] imgBytes = System.IO.File.ReadAllBytes("BepInEx/plugins/CardLoader/Artwork/ability_regen_full.png");
+            byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("SigilADay.dll",""),"Artwork/ability_regen_full.png"));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
@@ -193,7 +193,7 @@ namespace SigilADay
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
-            byte[] imgBytes = System.IO.File.ReadAllBytes("BepInEx/plugins/CardLoader/Artwork/ability_poisonous.png");
+            byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("SigilADay.dll",""),"Artwork/ability_poisonous.png"));
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
