@@ -12,6 +12,7 @@ Collection of custom sigils added to daily by Cyantist.
 
 ## Suggest an idea
 [Suggest](https://forms.gle/2GtJP16gB6kUbrJg8)
+
 [Already Submitted](https://docs.google.com/spreadsheets/d/1kxw50Brl9Pr1oM1UhjJnZyzyKbKZiDV_L5TLqp6lDR8/edit?resourcekey#gid=529419162)
 
 ## Vote on the next sigils!
