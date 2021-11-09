@@ -1,7 +1,7 @@
 # SigilADay
 Collection of custom sigils added to daily by Cyantist.
 
-##Sigils so far (Day 4)
+## Sigils so far (Day 4)
 - BloodGuzzler: When a creature bearing this sigil deals damage, it gains 1 Health for each damage dealt.
 - Leech: When a creature bearing this sigil deals damage, it heals 1 Health for each damage dealt.
 - Regen 1: This creature will heal 1 Health at the end of it's owner's turn.
