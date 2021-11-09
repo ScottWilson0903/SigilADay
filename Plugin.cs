@@ -470,8 +470,7 @@ namespace SigilADay
 
             public override bool RespondsToCardGettingAttacked(PlayableCard source)
         		{
-        			   return source == base.Card;
-                 this.attacked = true;
+                 return source == base.Card;
         		}
 
             public override bool RespondsToAttackEnded()
@@ -481,12 +480,13 @@ namespace SigilADay
 
             public override IEnumerator OnCardGettingAttacked(PlayableCard source)
             {
+                this.attacked = true;
                 yield return base.PreSuccessfulTriggerSequence();
                 this.mod.healthAdjustment = 1;
                 yield break;
             }
 
-            public override IEnumerator OnCardAttackEnded()
+            public override IEnumerator OnAttackEnded()
             {
                 this.attacked = false;
                 yield return new WaitForSeconds(0.1f);
