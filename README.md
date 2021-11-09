@@ -16,4 +16,5 @@ Collection of custom sigils added to daily by Cyantist.
 
 ## Vote on the next sigils!
 [Day 4 Voting Link](https://forms.gle/66xsWLkKpjX2XmVT7)
+
 [Day 5 Voting Link](https://forms.gle/H1znBp3Y6Z5jRQXNA)
