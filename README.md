@@ -10,6 +10,7 @@ Collection of custom sigils added to daily by Cyantist.
 - Regen: This creature will heal to full Health at the end of it's owner's turn.
 - Poisonous: When this creature perishes, it will kill the creature that killed it.
 - Thick Shell: When this creature is attacked, it will take one less damage.
+- Bonepicker - When this creature kills a creature, you gain one bone.
 
 ## Suggest an idea
 [Suggest](https://forms.gle/2GtJP16gB6kUbrJg8)
@@ -17,7 +18,7 @@ Collection of custom sigils added to daily by Cyantist.
 [Already Submitted](https://docs.google.com/spreadsheets/d/1kxw50Brl9Pr1oM1UhjJnZyzyKbKZiDV_L5TLqp6lDR8/edit?resourcekey#gid=529419162)
 
 ## Vote on the next sigils!
-[Day 5 Voting Link](https://forms.gle/H1znBp3Y6Z5jRQXNA)
+[Day 6 Voting Link](https://forms.gle/bd4mh1A9Ag3fTGbS7)
 
 [Day 6 Voting Link](https://forms.gle/bd4mh1A9Ag3fTGbS7)
 
