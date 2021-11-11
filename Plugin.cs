@@ -60,7 +60,7 @@ namespace SigilADay
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility ability = new NewAbility(info,typeof(BloodGuzzler),tex);
+            NewAbility ability = new NewAbility(info,typeof(BloodGuzzler),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             BloodGuzzler.ability = ability.ability;
             return ability;
         }
@@ -84,7 +84,7 @@ namespace SigilADay
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility ability = new NewAbility(info,typeof(Leech),tex);
+            NewAbility ability = new NewAbility(info,typeof(Leech),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             Leech.ability = ability.ability;
             return ability;
         }
@@ -107,7 +107,7 @@ namespace SigilADay
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility ability = new NewAbility(info,typeof(Regen1),tex);
+            NewAbility ability = new NewAbility(info,typeof(Regen1),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             Regen1.ability = ability.ability;
             return ability;
         }
@@ -130,7 +130,7 @@ namespace SigilADay
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility ability = new NewAbility(info,typeof(Regen2),tex);
+            NewAbility ability = new NewAbility(info,typeof(Regen2),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             Regen2.ability = ability.ability;
             return ability;
         }
@@ -153,7 +153,7 @@ namespace SigilADay
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility ability = new NewAbility(info,typeof(Regen3),tex);
+            NewAbility ability = new NewAbility(info,typeof(Regen3),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             Regen3.ability = ability.ability;
             return ability;
         }
@@ -176,7 +176,7 @@ namespace SigilADay
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility ability = new NewAbility(info,typeof(RegenFull),tex);
+            NewAbility ability = new NewAbility(info,typeof(RegenFull),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             RegenFull.ability = ability.ability;
             return ability;
         }
@@ -199,7 +199,7 @@ namespace SigilADay
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility ability = new NewAbility(info,typeof(Poisonous),tex);
+            NewAbility ability = new NewAbility(info,typeof(Poisonous),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             Poisonous.ability = ability.ability;
             return ability;
         }
@@ -222,7 +222,7 @@ namespace SigilADay
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility ability = new NewAbility(info,typeof(ThickShell),tex);
+            NewAbility ability = new NewAbility(info,typeof(ThickShell),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             ThickShell.ability = ability.ability;
             return ability;
         }
@@ -245,7 +245,7 @@ namespace SigilADay
             Texture2D tex = new Texture2D(2,2);
             tex.LoadImage(imgBytes);
 
-            NewAbility ability = new NewAbility(info,typeof(BonePicker),tex);
+            NewAbility ability = new NewAbility(info,typeof(BonePicker),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             BonePicker.ability = ability.ability;
             return ability;
         }
