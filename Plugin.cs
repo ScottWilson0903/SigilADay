@@ -19,7 +19,7 @@ namespace SigilADay
     {
         private const string PluginGuid = "cyantist.inscryption.sigiladay";
         private const string PluginName = "SigilADay";
-        private const string PluginVersion = "1.3.1.0";
+        private const string PluginVersion = "1.4.0.0";
 
         private void Awake()
         {
@@ -32,9 +32,11 @@ namespace SigilADay
             AddRegen3();
             AddRegenFull();
             AddPoisonous();
-            ChangeRingworm();
             AddThickShell();
             AddBonePicker();
+            AddNutritious();
+
+            ChangeRingworm();
         }
 
         private void ChangeRingworm(){
@@ -214,7 +216,7 @@ namespace SigilADay
 
             List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
             DialogueEvent.Line line = new DialogueEvent.Line();
-            line.text = "The thick shell on [creature] protected it from one damage!";
+            line.text = "The thick shell on that creature protected it from one damage!";
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
@@ -237,7 +239,7 @@ namespace SigilADay
 
             List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
             DialogueEvent.Line line = new DialogueEvent.Line();
-            line.text = "[creature] licks the corpse clean, and takes a bone!";
+            line.text = "Your creature licks the corpse clean, and takes a bone!";
             lines.Add(line);
             info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
@@ -247,6 +249,29 @@ namespace SigilADay
 
             NewAbility ability = new NewAbility(info,typeof(BonePicker),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
             BonePicker.ability = ability.ability;
+            return ability;
+        }
+
+        private NewAbility AddNutritious()
+        {
+            AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
+            info.powerLevel = 3;
+            info.rulebookName = "Nutritious";
+            info.rulebookDescription = "A creature gain 1 power and 2 health when summoned using [creature] as a sacrifice.";
+            info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
+
+            List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
+            DialogueEvent.Line line = new DialogueEvent.Line();
+            line.text = "That creature is so full of nutrients, the creature you play comes in stronger!";
+            lines.Add(line);
+            info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
+
+            byte[] imgBytes = System.IO.File.ReadAllBytes(Path.Combine(this.Info.Location.Replace("SigilADay.dll",""),"Artwork/ability_nutritious.png"));
+            Texture2D tex = new Texture2D(2,2);
+            tex.LoadImage(imgBytes);
+
+            NewAbility ability = new NewAbility(info,typeof(Nutritious),tex,AbilityIdentifier.GetAbilityIdentifier(PluginGuid, info.rulebookName));
+            Nutritious.ability = ability.ability;
             return ability;
         }
 
@@ -555,6 +580,43 @@ namespace SigilADay
                 Singleton<ViewManager>.Instance.Controller.LockState = ViewLockState.Unlocked;
                 yield break;
             }
+        }
+
+        public class Nutritious : AbilityBehaviour
+        {
+            public override Ability Ability
+            {
+                get
+                {
+                     return ability;
+                }
+            }
+
+            public static Ability ability;
+
+            private void Start()
+            {
+                this.mod = new CardModificationInfo();
+                this.mod.healthAdjustment = 2;
+                this.mod.attackAdjustment = 1;
+            }
+
+            public override bool RespondsToSacrifice()
+            {
+                 return true;
+            }
+
+            public override IEnumerator OnSacrifice()
+            {
+                yield return base.PreSuccessfulTriggerSequence();
+                Singleton<BoardManager>.Instance.currentSacrificeDemandingCard.AddTemporaryMod(this.mod);
+                Singleton<BoardManager>.Instance.currentSacrificeDemandingCard.OnStatsChanged();
+                yield return new WaitForSeconds(0.25f);
+                yield return base.LearnAbility(0.25f);
+                yield break;
+            }
+
+            private CardModificationInfo mod;
         }
     }
 }

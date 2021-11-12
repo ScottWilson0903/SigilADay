@@ -1,7 +1,7 @@
 # SigilADay
 Collection of custom sigils added to daily by Cyantist.
 
-## Sigils so far (Day 5)
+## Sigils so far (Day 6)
 - BloodGuzzler: When a creature bearing this sigil deals damage, it gains 1 Health for each damage dealt.
 - Leech: When a creature bearing this sigil deals damage, it heals 1 Health for each damage dealt.
 - Regen 1: This creature will heal 1 Health at the end of it's owner's turn.
@@ -11,6 +11,7 @@ Collection of custom sigils added to daily by Cyantist.
 - Poisonous: When this creature perishes, it will kill the creature that killed it.
 - Thick Shell: When this creature is attacked, it will take one less damage.
 - Bonepicker - When this creature kills a creature, you gain one bone.
+- Nutritious - A creature gains 1 power and 2 health when summoned using a creature with this sigil as a sacrifice.
 
 ## Suggest an idea
 [Suggest](https://forms.gle/2GtJP16gB6kUbrJg8)
@@ -18,7 +19,9 @@ Collection of custom sigils added to daily by Cyantist.
 [Already Submitted](https://docs.google.com/spreadsheets/d/1kxw50Brl9Pr1oM1UhjJnZyzyKbKZiDV_L5TLqp6lDR8/edit?resourcekey#gid=529419162)
 
 ## Vote on the next sigils!
-[Day 6 Voting Link](https://forms.gle/bd4mh1A9Ag3fTGbS7)
+[Day 7 Voting Link](https://forms.gle/jETFQzKLD4aaHvrc9)
+
+[Day 8 Voting Link](https://forms.gle/sw1wtB3gSP5HCBy17)
 
 ## Installation (automated)
 This is the recommended way to install the API on the game.
