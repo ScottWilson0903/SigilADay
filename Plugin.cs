@@ -19,7 +19,7 @@ namespace SigilADay
     {
         private const string PluginGuid = "cyantist.inscryption.sigiladay";
         private const string PluginName = "SigilADay";
-        private const string PluginVersion = "1.4.0.0";
+        private const string PluginVersion = "1.4.1.0";
 
         private void Awake()
         {
