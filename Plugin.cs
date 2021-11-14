@@ -19,11 +19,14 @@ namespace SigilADay
   {
     private const string PluginGuid = "cyantist.inscryption.sigiladay";
     private const string PluginName = "SigilADay";
-    private const string PluginVersion = "1.4.1.0";
+    private const string PluginVersion = "1.5.0.0";
+
+    internal static ManualLogSource Log;
 
     private void Awake()
     {
       Logger.LogInfo($"Loaded {PluginName}!");
+      Plugin.Log = base.Logger;
 
       AddBloodGuzzler();
       AddLeech();
@@ -35,6 +38,8 @@ namespace SigilADay
       AddThickShell();
       AddBonePicker();
       AddNutritious();
+      AddTransient();
+      //AddSilence();
 
       ChangeRingworm();
     }
