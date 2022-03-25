@@ -14,12 +14,18 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 3;
       info.rulebookName = "Thick Shell";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookName = "厚甲壳";
       info.rulebookDescription = "When attacked, [creature] takes one less damage.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookDescription = "[creature]受伤时，少受1点伤害。";
       info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
       List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
       DialogueEvent.Line line = new DialogueEvent.Line();
       line.text = "The thick shell on that creature protected it from one damage!";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                line.text = "那个造物身上的厚甲壳格挡了1点伤害!";
       lines.Add(line);
       info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 

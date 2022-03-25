@@ -14,12 +14,18 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 3;
       info.rulebookName = "Nutritious";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookName = "富营养化";
       info.rulebookDescription = "A creature gain 1 power and 2 health when summoned using [creature] as a sacrifice.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookDescription = "献祭[creature]，召唤出来的造物会获得1点攻击力和2点生命值。";
       info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
       List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
       DialogueEvent.Line line = new DialogueEvent.Line();
       line.text = "That creature is so full of nutrients, the creature you play comes in stronger!";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                line.text = "那个生物营养丰富，你召唤出来的造物会更强！";
       lines.Add(line);
       info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 

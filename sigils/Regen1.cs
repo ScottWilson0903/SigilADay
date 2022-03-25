@@ -14,12 +14,18 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 1;
       info.rulebookName = "Regen 1";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookName = "1级回复";
       info.rulebookDescription = "At the end of the owner's turn, [creature] will regen 1 health.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookDescription = "[creature]，会在持牌人回合结束时，恢复1点生命值。";
       info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
       List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
       DialogueEvent.Line line = new DialogueEvent.Line();
       line.text = "This creature will heal 1 Health at the end of it's owner's turn.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                line.text = "这个造物阵亡时，它会毒害那个消灭它的造物。";
       lines.Add(line);
       info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 

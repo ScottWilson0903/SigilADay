@@ -14,12 +14,18 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 4;
       info.rulebookName = "Leech";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookName = "水蛭";
       info.rulebookDescription = "When a creature bearing this sigil deals damage, it heals 1 Health for each damage dealt.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookDescription = "[creature]造成伤害时，每造成一点恢复1点生命值。";
       info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
       List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
       DialogueEvent.Line line = new DialogueEvent.Line();
       line.text = "This creature will heals 1 Health for each damage it deals to creatures.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                line.text = "这个造物对其他造物每造成一点伤害，就会恢复1点生命值。";
       lines.Add(line);
       info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 

@@ -14,12 +14,18 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 3;
       info.rulebookName = "Transient";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookName = "暂时";
       info.rulebookDescription = "[creature] will return to your hand at the end of the turn.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookDescription = "[creature]会在回合结束时返回到你的手牌中。";
       info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
       List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
       DialogueEvent.Line line = new DialogueEvent.Line();
       line.text = "The creature blinks back into the owner's hand at the end of their turn.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                line.text = "造物会在它的回合结束后返回到持牌人的手中。";
       lines.Add(line);
       info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
