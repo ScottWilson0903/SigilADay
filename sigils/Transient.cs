@@ -14,8 +14,8 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 3;
       info.rulebookName = "Transient";
-            if(Localization.CurrentLanguage == Language.ChineseSimplified)
-                info.rulebookName = "暂时";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "暂时";
       info.rulebookDescription = "[creature] will return to your hand at the end of the turn.";
             if(Localization.CurrentLanguage == Language.ChineseSimplified)
                 info.rulebookDescription = "[creature]会在回合结束时返回到你的手牌中。";

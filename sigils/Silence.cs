@@ -15,8 +15,8 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 5;
       info.rulebookName = "Silence";
-            if(Localization.CurrentLanguage == Language.ChineseSimplified)
-                info.rulebookName = "沉默";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "沉默";
       info.rulebookDescription = "Creatures opposing [creature] have all their sigils silenced.";
             if(Localization.CurrentLanguage == Language.ChineseSimplified)
                 info.rulebookDescription = "使[creature]对面造物的印记无效。";

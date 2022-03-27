@@ -14,8 +14,8 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 3;
       info.rulebookName = "Poisonous";
-            if(Localization.CurrentLanguage == Language.ChineseSimplified)
-                info.rulebookName = "有毒";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "有毒";
       info.rulebookDescription = "When [creature] perishes, the creature that killed it perishes as well.";
             if(Localization.CurrentLanguage == Language.ChineseSimplified)
                 info.rulebookDescription = "[creature]阵亡时，消灭它的造物也会同时阵亡。";

@@ -14,8 +14,8 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 1;
       info.rulebookName = "Bone Picker";
-            if(Localization.CurrentLanguage == Language.ChineseSimplified)
-                info.rulebookName = "拾骨者";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "拾骨者";
       info.rulebookDescription = "When [creature] kills a creature, it will generate 1 Bone.";
             if (Localization.CurrentLanguage == Language.ChineseSimplified)
                 info.rulebookDescription = "[creature]消灭一个造物，会产生1根骨头。";

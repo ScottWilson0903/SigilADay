@@ -14,8 +14,8 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 4;
       info.rulebookName = "Leech";
-            if(Localization.CurrentLanguage == Language.ChineseSimplified)
-                info.rulebookName = "水蛭";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "水蛭";
       info.rulebookDescription = "When a creature bearing this sigil deals damage, it heals 1 Health for each damage dealt.";
             if(Localization.CurrentLanguage == Language.ChineseSimplified)
                 info.rulebookDescription = "[creature]造成伤害时，每造成一点恢复1点生命值。";

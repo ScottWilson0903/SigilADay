@@ -14,8 +14,8 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 1;
       info.rulebookName = "Regen 1";
-            if(Localization.CurrentLanguage == Language.ChineseSimplified)
-                info.rulebookName = "1级回复";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "1级回复";
       info.rulebookDescription = "At the end of the owner's turn, [creature] will regen 1 health.";
             if(Localization.CurrentLanguage == Language.ChineseSimplified)
                 info.rulebookDescription = "[creature]，会在持牌人回合结束时，恢复1点生命值。";

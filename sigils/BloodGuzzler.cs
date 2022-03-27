@@ -14,8 +14,8 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 5;
       info.rulebookName = "BloodGuzzler";
-            if(Localization.CurrentLanguage == Language.ChineseSimplified)
-                info.rulebookName = "嗜血者";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "嗜血者";
       info.rulebookDescription = "When a creature bearing this sigil deals damage, it gains 1 Health for each damage dealt.";
             if (Localization.CurrentLanguage == Language.ChineseSimplified)
                 info.rulebookDescription = "[creature]造成伤害时，每造成一点获得1点生命值。";

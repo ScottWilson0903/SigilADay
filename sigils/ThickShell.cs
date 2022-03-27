@@ -14,8 +14,8 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 3;
       info.rulebookName = "Thick Shell";
-            if(Localization.CurrentLanguage == Language.ChineseSimplified)
-                info.rulebookName = "∫Òº◊ø«";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "∫Òº◊ø«";
       info.rulebookDescription = "When attacked, [creature] takes one less damage.";
             if(Localization.CurrentLanguage == Language.ChineseSimplified)
                 info.rulebookDescription = "[creature] ‹…À ±£¨…Ÿ ‹1µ„…À∫¶°£";
