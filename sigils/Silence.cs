@@ -15,12 +15,18 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 5;
       info.rulebookName = "Silence";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "沉默";
       info.rulebookDescription = "Creatures opposing [creature] have all their sigils silenced.";
-      info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookDescription = "使[creature]对面造物的印记无效。";
+            info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
       List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
       DialogueEvent.Line line = new DialogueEvent.Line();
       line.text = "The sigils opposing your creature are silenced!";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                line.text = "你的造物对面的印记被沉默了!";
       lines.Add(line);
       info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 

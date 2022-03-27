@@ -14,12 +14,18 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 1;
       info.rulebookName = "Bone Picker";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "拾骨者";
       info.rulebookDescription = "When [creature] kills a creature, it will generate 1 Bone.";
+            if (Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookDescription = "[creature]消灭一个造物，会产生1根骨头。";
       info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
       List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
       DialogueEvent.Line line = new DialogueEvent.Line();
       line.text = "Your creature licks the corpse clean, and takes a bone!";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                line.text = "你的造物将尸体舔干净，并取走了根骨头！";
       lines.Add(line);
       info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 

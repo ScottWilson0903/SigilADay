@@ -14,12 +14,18 @@ namespace SigilADay
       AbilityInfo info = ScriptableObject.CreateInstance<AbilityInfo>();
       info.powerLevel = 3;
       info.rulebookName = "Poisonous";
+      //      if(Localization.CurrentLanguage == Language.ChineseSimplified)
+      //          info.rulebookName = "有毒";
       info.rulebookDescription = "When [creature] perishes, the creature that killed it perishes as well.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                info.rulebookDescription = "[creature]阵亡时，消灭它的造物也会同时阵亡。";
       info.metaCategories = new List<AbilityMetaCategory> {AbilityMetaCategory.Part1Rulebook, AbilityMetaCategory.Part1Modular};
 
       List<DialogueEvent.Line> lines = new List<DialogueEvent.Line>();
       DialogueEvent.Line line = new DialogueEvent.Line();
       line.text = "When this creature perishes, it will kill the creature that killed it.";
+            if(Localization.CurrentLanguage == Language.ChineseSimplified)
+                line.text = "这个造物阵亡时，它会毒害那个消灭它的造物。";
       lines.Add(line);
       info.abilityLearnedDialogue = new DialogueEvent.LineSet(lines);
 
